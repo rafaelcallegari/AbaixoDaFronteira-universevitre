@@ -1,0 +1,4 @@
+C:\Users\rafael\Downloads\Godot_v4.7.2-stable_win64.exe\Godot_v4.7.2-stable_win64_console.exe
+# O zip foi extraido numa pasta com o mesmo nome do .exe, por isso o nome repete.
+# Variante _console.exe: a que escreve print/erro no terminal. A sem _console
+# (mesma pasta) e a de abrir o editor no Windows.

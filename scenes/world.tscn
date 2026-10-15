@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://c35lwybvuoj6l"]
+
+[ext_resource type="Script" uid="uid://5whkkr7a11bx" path="res://scripts/player.gd" id="1_nnsk1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwgxs"]
+size = Vector2(480, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wyf3"]
+size = Vector2(480, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0juu"]
+size = Vector2(8, 270)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f23f4"]
+size = Vector2(8, 270)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tflvd"]
+size = Vector2(12, 12)
+
+[node name="World" type="Node2D" unique_id=14726925]
+
+[node name="Chao" type="ColorRect" parent="." unique_id=1227919397]
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(0.16862746, 0.16862746, 0.2, 1)
+
+[node name="paredeTopo" type="StaticBody2D" parent="." unique_id=961525995]
+position = Vector2(240, 4)
+
+[node name="ColorRect" type="ColorRect" parent="paredeTopo" unique_id=668325892]
+offset_left = -240.0
+offset_top = -4.0
+offset_right = 240.0
+offset_bottom = 4.0
+color = Color(0.41960785, 0.3529412, 0.24313726, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredeTopo" unique_id=2000018027]
+shape = SubResource("RectangleShape2D_rwgxs")
+
+[node name="paredeBaixo" type="StaticBody2D" parent="." unique_id=1196271702]
+position = Vector2(240, 266)
+
+[node name="ColorRect" type="ColorRect" parent="paredeBaixo" unique_id=778065082]
+offset_left = -240.0
+offset_top = -4.0
+offset_right = 240.0
+offset_bottom = 4.0
+color = Color(0.41960785, 0.3529412, 0.24313726, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredeBaixo" unique_id=1245745123]
+shape = SubResource("RectangleShape2D_4wyf3")
+
+[node name="paredeEsquerda" type="StaticBody2D" parent="." unique_id=217602053]
+position = Vector2(4, 135)
+
+[node name="ColorRect" type="ColorRect" parent="paredeEsquerda" unique_id=698421394]
+offset_left = -4.0
+offset_top = -135.0
+offset_right = 4.0
+offset_bottom = 144.0
+color = Color(0.41960785, 0.3529412, 0.24313726, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredeEsquerda" unique_id=1310217282]
+shape = SubResource("RectangleShape2D_k0juu")
+
+[node name="paredeDireita" type="StaticBody2D" parent="." unique_id=2109871791]
+position = Vector2(476, 135)
+
+[node name="ColorRect" type="ColorRect" parent="paredeDireita" unique_id=1295185658]
+offset_left = -4.0
+offset_top = -135.0
+offset_right = 4.0
+offset_bottom = 135.0
+color = Color(0.41960785, 0.3529412, 0.24313726, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredeDireita" unique_id=674178160]
+shape = SubResource("RectangleShape2D_f23f4")
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=1513069668]
+position = Vector2(240, 180)
+script = ExtResource("1_nnsk1")
+
+[node name="ColorRect" type="ColorRect" parent="player" unique_id=1501096101]
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+color = Color(0.2901961, 0.6392157, 1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=37337843]
+shape = SubResource("RectangleShape2D_tflvd")
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1524974335]
+limit_left = 0
+limit_top = 0
+limit_right = 480
+limit_bottom = 270
+position_smoothing_enabled = true
